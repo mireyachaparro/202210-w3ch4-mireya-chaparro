@@ -1,4 +1,4 @@
-const series = [
+export const SERIES = [
   {
     id: 1,
     name: 'The Sopranos',
@@ -37,7 +37,8 @@ const series = [
     name: '6 feet under',
     creator: 'Alan Ball',
     year: 2001,
-    poster: 'https://www.cine.com/media/series/2711.jpg',
+    poster:
+      'https://papermint.es/wp-content/uploads/2018/09/six-feet-under-poster-papermint.jpg',
     watched: true,
     score: 5,
     emmies: 53,
@@ -47,7 +48,8 @@ const series = [
     name: 'Atypical',
     creator: 'Robia Rashid',
     year: 2017,
-    poster: 'https://www.cine.com/media/series/2711.jpg',
+    poster:
+      'https://pics.filmaffinity.com/At_pico_Serie_de_TV-405052091-large.jpg',
     watched: false,
     score: 0,
     emmies: 0,
