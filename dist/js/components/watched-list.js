@@ -21,12 +21,12 @@ export class WatchedList extends Component {
         this.renderAdd(this.selector, this.template);
     }
     createTemplate() {
-        let template = `<section class="series-pending">
+        let watched = this.series.filter((serie) => serie.watched === true);
+        let template = `<section class="series-watched">
                     <h3 class="subsection-title">Watched series</h3>
-                    <p class="info">You have 4 series pending to watch</p>
+                    <p class="info">You have watched ${watched.length} series</p>
                     <ul class="series-list">`;
-        //FILTRO PARA QUE SALGAN LAS PENDIENTES                this.series = this.series.filter((serie) => (serie.watched = true));
-        this.series.forEach((item) => {
+        watched.forEach((item) => {
             template += new ItemSerie('', item, this.handlerEraser.bind(this), this.handlerWatched.bind(this)).template;
         });
         template += `</ul>
