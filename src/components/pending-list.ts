@@ -26,12 +26,14 @@ export class PendingList extends Component {
   }
 
   createTemplate() {
+    let pending = this.series.filter((serie) => serie.watched === false);
+
     let template = `<section class="series-pending">
                     <h3 class="subsection-title">Pending series</h3>
-                    <p class="info">You have 4 series pending to watch</p>
+                    <p class="info">You have ${pending.length} series pending to watch</p>
                     <ul class="series-list">`;
-    //FILTRO PARA QUE SALGAN LAS PENDIENTES                    this.series = this.series.filter((serie) => (serie.watched = false));
-    this.series.forEach((item: ISeries) => {
+
+    pending.forEach((item: ISeries) => {
       template += new ItemSerie(
         '',
         item,
